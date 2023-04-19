@@ -8,5 +8,6 @@ namespace ControleMedicamento.ConsoleApp.ModuloFuncionario
 {
     internal class RepositorioFuncionario
     {
+
     }
 }
