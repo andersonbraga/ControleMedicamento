@@ -9,26 +9,26 @@ namespace ControleMedicamento.ConsoleApp.ModuloPaciente
 {
     internal class RepositorioPaciente : CompartilhadoComun
     {
-        public void AdicionarPaciente(Paciente paciente) 
+                          
+        public void CadastrarPaciente(Paciente paciente)
         {
-            listaObj.Add(paciente);
+            Adicionar(paciente);
             paciente.Id = listaObj.Count;
         }
 
-        public void CadastrarPaciente(Paciente paciente)
+        public virtual Entidade Editar(Paciente pacienteAtualizado, int id)
         {
-            AdicionarPaciente(paciente);
+            Paciente paciente = (Paciente)SelecionarPorId(id);
+
+            paciente.Nome = pacienteAtualizado.Nome;
+            paciente.Cpf = pacienteAtualizado.Cpf;
+            paciente.Telefone = pacienteAtualizado.Telefone;
+            paciente.CartaoSus = pacienteAtualizado.CartaoSus;
+            paciente.Endereco = pacienteAtualizado.Endereco;
+
+            return paciente;
         }
 
-        public List<object> ListarTodos()
-        {
-            return listaObj;
-        }
-
-        public void ExcluirPaciente()
-        {
-            Console.WriteLine("Digite o ID do paciente que desejar excluir: ");
-            int idExcluir = Convert.ToInt32(Console.ReadLine());
 
             foreach(Paciente paciente in listaObj)
             {

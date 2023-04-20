@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ControleMedicamento.ConsoleApp.Compartilhado;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ControleMedicamento.ConsoleApp.ModuloFuncionario
 {
-    internal class Funcionario
+    internal class Funcionario : Entidade
     {
         public string Nome { get; set; }
         public string Cpf { get; set; }
