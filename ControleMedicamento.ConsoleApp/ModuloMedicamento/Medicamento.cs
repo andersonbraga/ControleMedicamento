@@ -1,4 +1,5 @@
-﻿using ControleMedicamento.ConsoleApp.ModuloFornecedor;
+﻿using ControleMedicamento.ConsoleApp.Compartilhado;
+using ControleMedicamento.ConsoleApp.ModuloFornecedor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ControleMedicamento.ConsoleApp.ModuloMedicamentos
 {
-    internal class Medicamento
+    internal class Medicamento : Entidade
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
