@@ -66,6 +66,7 @@ namespace ControleMedicamento.ConsoleApp.ModuloPaciente
             Console.WriteLine("Digite o telefone do paciente: ");
             paciente.Telefone = Console.ReadLine();
 
+
             return paciente;
         }
 

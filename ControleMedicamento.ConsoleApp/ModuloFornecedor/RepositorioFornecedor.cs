@@ -27,7 +27,7 @@ namespace ControleMedicamento.ConsoleApp.ModuloFornecedor
             fornecedor.Telefone = fornecedorAtualizado.Telefone;
             fornecedor.Endereco = fornecedorAtualizado.Endereco;
             fornecedor.Email = fornecedorAtualizado.Email;
-            fornecedor.Medicamento = fornecedorAtualizado.Medicamento;
+            //fornecedor.Medicamento = fornecedorAtualizado.Medicamento;
 
             return fornecedor;
         }

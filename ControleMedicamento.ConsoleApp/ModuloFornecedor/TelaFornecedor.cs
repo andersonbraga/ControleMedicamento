@@ -69,16 +69,16 @@ namespace ControleMedicamento.ConsoleApp.ModuloFornecedor
             fornecedor.Telefone = Console.ReadLine();
             Console.WriteLine("Digite o email do fornecedor: ");
             fornecedor.Email = Console.ReadLine();
-            Console.WriteLine("Digite o ID do medicamento que o postinho tem: ");
-            int idMedicamento = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Digite o ID do medicamento que o postinho tem: ");
+            //int idMedicamento = Convert.ToInt32(Console.ReadLine());
 
-            foreach(Medicamento medicamento in repositorioMedicamento.listaObj)
-            {
-                if(idMedicamento == medicamento.Id)
-                {
-                    medicamentoObj = medicamento;
-                }
-            }
+            //foreach(Medicamento medicamento in listaObj)
+            //{
+            //    if(idMedicamento == medicamento.Id)
+            //    {
+            //        medicamentoObj = medicamento;
+            //    }
+            //}
 
             return fornecedor;
         }
@@ -100,7 +100,8 @@ namespace ControleMedicamento.ConsoleApp.ModuloFornecedor
             {
                 foreach (Fornecedor fornecedor in listaObj)
                 {
-                    Console.WriteLine($"{fornecedor.Id} {fornecedor.Nome}\n {fornecedor.Cnpj}\n  {fornecedor.Endereco}\n {fornecedor.Telefone} \n {fornecedor.Email}\n {fornecedor.Medicamento.Id}");
+                    Console.WriteLine($"{fornecedor.Id} {fornecedor.Nome}\n {fornecedor.Cnpj}\n  {fornecedor.Endereco}\n {fornecedor.Telefone} \n {fornecedor.Email}\n ");
+                    //{ fornecedor.Medicamento.Id}
                     Console.ReadKey();
                 }
             }

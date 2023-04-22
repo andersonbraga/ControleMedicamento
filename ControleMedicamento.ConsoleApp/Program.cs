@@ -12,20 +12,31 @@ namespace ControleMedicamento.ConsoleApp
         {
             TelaPaciente telaPaciente = new TelaPaciente();
             RepositorioPaciente repositorioPaciente = new RepositorioPaciente();
-            telaPaciente.repositorioPaciente = repositorioPaciente;
+            
             
             TelaFuncionario telaFuncionario = new TelaFuncionario();
             RepositorioFuncionario repositorioFuncionario = new RepositorioFuncionario();
-            telaFuncionario.repositorioFuncionario = repositorioFuncionario;
-
-            TelaMedicamento telaMedicamento = new TelaMedicamento();
-            RepositorioMedicamento repositorioMedicamento = new RepositorioMedicamento();
             
 
             TelaFornecedor telaFornecedor = new TelaFornecedor();
             RepositorioFornecedor repositorioFornecedor = new RepositorioFornecedor();
+
+            TelaMedicamento telaMedicamento = new TelaMedicamento();
+            RepositorioMedicamento repositorioMedicamento = new RepositorioMedicamento();
+
+
+
+            telaPaciente.repositorioPaciente = repositorioPaciente;
+
+            telaFuncionario.repositorioFuncionario = repositorioFuncionario;
+
             telaFornecedor.repositorioFornecedor = repositorioFornecedor;
             telaFornecedor.repositorioMedicamento = repositorioMedicamento;
+
+            telaMedicamento.repositorioFornecedor = repositorioFornecedor;
+            telaMedicamento.repositorioMedicamento = repositorioMedicamento;
+
+
 
             int opcao;
             do
@@ -46,7 +57,7 @@ namespace ControleMedicamento.ConsoleApp
                         telaFuncionario.MostrarMenu();
                         break;
                     case 3:
-                        telaFuncionario.MostrarMenu();
+                        telaFornecedor.MostrarMenu();
                         break;
                     case 4:
                         telaMedicamento.MostrarMenu();
