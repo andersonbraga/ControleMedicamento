@@ -4,6 +4,7 @@ using ControleMedicamento.ConsoleApp.ModuloFuncionario;
 using ControleMedicamento.ConsoleApp.ModuloMedicamento;
 using ControleMedicamento.ConsoleApp.ModuloMedicamentos;
 using ControleMedicamento.ConsoleApp.ModuloPaciente;
+using ControleMedicamento.ConsoleApp.ModuloRequisicao;
 
 namespace ControleMedicamento.ConsoleApp
 {
@@ -27,6 +28,13 @@ namespace ControleMedicamento.ConsoleApp
 
             TelaAquisicao telaAquisicao = new TelaAquisicao();
             RepositorioAquisicao repositorioAquisicao = new RepositorioAquisicao();
+
+            TelaRequisicao telaRequisicao = new TelaRequisicao();
+            RepositorioRequisicao repositorioRequisicao = new RepositorioRequisicao();
+
+            telaRequisicao.repositorioRequisicao = repositorioRequisicao;
+            telaRequisicao.repositorioFuncionario = repositorioFuncionario;
+            telaRequisicao.repositorioPaciente = repositorioPaciente;
 
             
             telaAquisicao.repositorioFornecedor = repositorioFornecedor;
@@ -54,6 +62,8 @@ namespace ControleMedicamento.ConsoleApp
                 Console.WriteLine("2 - Gerenciar Funcionarios");
                 Console.WriteLine("3 - Gerenciar Fornecedor");
                 Console.WriteLine("4 - Gerenciar Medicamentos");
+                Console.WriteLine("5 - Gerenciar Aquisição");
+                Console.WriteLine("6 - Gerenciar Requisições");
                 Console.WriteLine("Digite uma opção: ");
                 opcao = Convert.ToInt32(Console.ReadLine());
 
@@ -73,6 +83,9 @@ namespace ControleMedicamento.ConsoleApp
                         break;
                     case 5:
                         telaAquisicao.MostrarMenu();
+                        break;
+                    case 6:
+                        telaRequisicao.MostrarMenu();
                         break;
                     case 0:
                         Console.WriteLine("Saindo...");

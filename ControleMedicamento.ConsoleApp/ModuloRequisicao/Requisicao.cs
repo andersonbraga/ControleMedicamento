@@ -1,4 +1,5 @@
-﻿using ControleMedicamento.ConsoleApp.ModuloFuncionario;
+﻿using ControleMedicamento.ConsoleApp.Compartilhado;
+using ControleMedicamento.ConsoleApp.ModuloFuncionario;
 using ControleMedicamento.ConsoleApp.ModuloMedicamentos;
 using ControleMedicamento.ConsoleApp.ModuloPaciente;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ControleMedicamento.ConsoleApp.ModuloRequisicao
 {
-    internal class Requisicao
+    internal class Requisicao : Entidade
     {
         public Paciente Paciente { get; set; }
         public Medicamento Medicamento { get; set; }
