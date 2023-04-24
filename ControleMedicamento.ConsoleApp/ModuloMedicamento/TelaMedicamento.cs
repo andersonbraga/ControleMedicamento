@@ -57,7 +57,7 @@ namespace ControleMedicamento.ConsoleApp.ModuloMedicamento
         public Medicamento ObterMedicamento()
         {
             Medicamento medicamento = new Medicamento();
-            Fornecedor fornecedorObj = null;
+       
 
             Console.WriteLine("Digite o nome do Medicamento: ");
             medicamento.Nome = Console.ReadLine();
@@ -74,11 +74,11 @@ namespace ControleMedicamento.ConsoleApp.ModuloMedicamento
             {
                 if (idFornecedor == fornecedor.Id)
                 {
-                    fornecedorObj = fornecedor;
+                    medicamento.Fornecedor = fornecedor;
                 }
             }
 
-            medicamento.Fornecedor = fornecedorObj;
+            
             
             
 

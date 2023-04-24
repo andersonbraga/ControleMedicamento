@@ -1,4 +1,5 @@
-﻿using ControleMedicamento.ConsoleApp.ModuloFornecedor;
+﻿using ControleMedicamento.ConsoleApp.ModuloAquisicao;
+using ControleMedicamento.ConsoleApp.ModuloFornecedor;
 using ControleMedicamento.ConsoleApp.ModuloFuncionario;
 using ControleMedicamento.ConsoleApp.ModuloMedicamento;
 using ControleMedicamento.ConsoleApp.ModuloMedicamentos;
@@ -24,6 +25,13 @@ namespace ControleMedicamento.ConsoleApp
             TelaMedicamento telaMedicamento = new TelaMedicamento();
             RepositorioMedicamento repositorioMedicamento = new RepositorioMedicamento();
 
+            TelaAquisicao telaAquisicao = new TelaAquisicao();
+            RepositorioAquisicao repositorioAquisicao = new RepositorioAquisicao();
+
+            
+            telaAquisicao.repositorioFornecedor = repositorioFornecedor;
+            telaAquisicao.repositorioAquisicao = repositorioAquisicao;
+            telaAquisicao.repositorioMedicamento = repositorioMedicamento;
 
 
             telaPaciente.repositorioPaciente = repositorioPaciente;
@@ -36,6 +44,7 @@ namespace ControleMedicamento.ConsoleApp
             telaMedicamento.repositorioFornecedor = repositorioFornecedor;
             telaMedicamento.repositorioMedicamento = repositorioMedicamento;
 
+            
 
 
             int opcao;
@@ -61,6 +70,9 @@ namespace ControleMedicamento.ConsoleApp
                         break;
                     case 4:
                         telaMedicamento.MostrarMenu();
+                        break;
+                    case 5:
+                        telaAquisicao.MostrarMenu();
                         break;
                     case 0:
                         Console.WriteLine("Saindo...");
