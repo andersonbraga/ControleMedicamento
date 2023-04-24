@@ -9,6 +9,6 @@ namespace ControleMedicamento.ConsoleApp.Compartilhado
     public abstract class Entidade
     {
         public int Id { get; set; } 
-        public string 
+        
     }
 }
