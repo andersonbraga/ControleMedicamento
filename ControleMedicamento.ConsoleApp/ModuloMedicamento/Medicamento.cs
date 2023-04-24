@@ -10,6 +10,8 @@ namespace ControleMedicamento.ConsoleApp.ModuloMedicamentos
 {
     internal class Medicamento : Entidade
     {
+        internal int adicionarMedicamento { get; set; }
+
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public string QuantidadeDisponivel { get; set; }

@@ -30,5 +30,19 @@ namespace ControleMedicamento.ConsoleApp.ModuloMedicamentos
             return medicamento;
         }
 
+        public Entidade JaCadastrado(Medicamento medicamentoComparado, int id, int quantidadeAdicional)
+        {
+            Medicamento medicamento = (Medicamento)SelecionarPorId(id);
+
+            if(medicamento.Id == id)
+            {
+                medicamento.QuantidadeLimite += quantidadeAdicional;
+            }
+
+                return medicamento;
+
+
+        }
+
     }
 }

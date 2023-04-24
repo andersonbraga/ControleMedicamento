@@ -69,6 +69,9 @@ namespace ControleMedicamento.ConsoleApp.ModuloMedicamento
             medicamento.QuantidadeLimite = int.Parse(Console.ReadLine());
             Console.WriteLine("Digite o Id do Fornecedor de medicamento: ");
             int idFornecedor = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a quantidade para adicionar: ");
+            medicamento.adicionarMedicamento = int.Parse(Console.ReadLine());
+
 
             foreach (Fornecedor fornecedor in repositorioFornecedor.listaObj)
             {
@@ -78,9 +81,18 @@ namespace ControleMedicamento.ConsoleApp.ModuloMedicamento
                 }
             }
 
-            
-            
-            
+            foreach(Medicamento medicamento2 in repositorioMedicamento.listaObj)
+            {
+                if(medicamento.Nome == medicamento2.Nome) 
+                {
+                  string quantidadeTotal = medicamento.QuantidadeDisponivel + medicamento.adicionarMedicamento;
+                }
+            }
+
+
+
+
+
 
             return medicamento;
         }
